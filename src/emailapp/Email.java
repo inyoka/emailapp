@@ -1,6 +1,5 @@
 package emailapp;
 
-public class Email {
 
 public class Email {
 	private String firstName;
@@ -9,6 +8,18 @@ public class Email {
 	private String department;
 	private int mailboxCapacity;
 	private String alternateEmail; 
+	
+//	 Constructor reiceve first and lastname
+	public Email(String firstName, String lastName) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		
+		System.out.println("Email created for " + this.firstName + " " + this.lastName);
+		
+//		Call method asking for department
+		this.department = setDepartment();
+		System.out.println("Department : " + this.department);
+	}
 	
 //	Generate a random password
 	
